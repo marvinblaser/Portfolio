@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -15,7 +19,70 @@
     --dark-grey: #4A4E4C;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     background-color: var(--white);
 }
 
+h1{
+    font-size: 72px;
+}
+
+h2{
+    font-size: 52px;
+}
+
+h3{
+    font-size: 48px;
+}
+
+.p-bold{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 20px;
+}
+
+.graffity{
+    font-family: 'Permanent Marker', cursive;
+}
+
+header{
+    padding: 20px 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+    display: flex;
+    gap: 120px;;
+}
+
+nav li a{
+    color: var(--black);
+}
+
+.lang-selector{
+    cursor: pointer;
+    padding: 6px 10px;
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.flag{
+    width: 30px;
+    height: 20px;
+}
+
+.active{
+    text-decoration: underline var(--dark-green) 3px;
+}
