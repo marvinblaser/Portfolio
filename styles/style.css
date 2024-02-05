@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --white: #ECF8F2;
+    --black: #000A06;
+    --grey: #878D8A;
+    --green: #1DBB6F;
+    --light-green: #6EE6AC;
+    --dark-green: #133A27;
+    --light-grey: #D3D7D5;
+    --dark-grey: #4A4E4C;
+}
+
+body{
+    background-color: var(--white);
+}
