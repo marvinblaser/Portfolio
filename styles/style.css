@@ -398,3 +398,109 @@ main{
     transform: rotate(-4deg);
     width: 150%;
 }
+
+.projets-container{
+    display: flex;
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 20px;
+    height: 37vw;
+    border-radius: 30px;
+}
+
+.card-open{
+    width: 70vw;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../stock/img/landscap1.avif');
+}
+
+.card-closed{
+    cursor: pointer;
+    width: 10vw;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../stock/img/landscap1.avif');
+}
+
+.card-closed .card-title{
+    position: relative;
+    width: 500%;
+    transform: rotate(-90deg) translate(45%, -12vw);
+}
+
+.card-closed .card-desc, .card-closed .see-projet{
+    display: none;
+}
+
+.card-title{
+    color: var(--white);
+}
+
+.card-desc{
+    color: var(--white);
+    width: 70%;
+}
+
+.see-projet{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 30px;
+    background-color: var(--white);
+    width: fit-content;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.see-projet::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background-color: var(--green);
+    left: -10%;
+    top: -60%;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all .4s;
+}
+
+.see-projet::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background-color: var(--green);
+    right: -10%;
+    bottom: -60%;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all .4s;
+}
+
+.see-projet:hover::after, .see-projet:hover::before{
+    transform: scale(10);
+}
+
+.see-projet svg{
+    transition: .2s;
+}
+
+.see-projet:hover svg{
+    transform: translateX(5px);
+}
+
+.see-projet-text, .see-projet svg{
+    position: relative;
+    z-index: 2;
+}
