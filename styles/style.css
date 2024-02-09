@@ -24,6 +24,7 @@ a{
 }
 
 body{
+    overflow-x: hidden;
     background-color: var(--white);
 }
 
@@ -405,6 +406,8 @@ main{
 }
 
 .card{
+    --x: 0;
+    --y: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -415,17 +418,21 @@ main{
     padding: 40px 20px;
     height: 37vw;
     border-radius: 30px;
+    transition: .3s ease;
+    border: solid 2px #000000;
+    background: radial-gradient(circle at var(--x) var(--y), rgba(229,73,237,1) 0%, rgba(0,212,255,0) 100%);
+    background-repeat: no-repeat;
 }
 
 .card-open{
     width: 70vw;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../stock/img/landscap1.avif');
+    /* background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../stock/img/landscap1.avif'); */
 }
 
 .card-closed{
     cursor: pointer;
     width: 10vw;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../stock/img/landscap1.avif');
+    /* background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../stock/img/landscap1.avif'); */
 }
 
 .card-closed .card-title{
