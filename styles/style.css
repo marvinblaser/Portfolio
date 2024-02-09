@@ -185,8 +185,8 @@ footer{
     flex-direction: column;
     background-color: var(--grey);
     align-items: center;
-    gap: 50px;
-    margin: 70px 0 0 0;
+    gap: 70px;
+    margin: 200px 0 0 0;
     padding: 70px 0 0 0;
 }
 
@@ -215,6 +215,7 @@ footer{
 .footer-nav{
     display: flex;
     gap: 40px;
+    padding: 0 0 50px 0;
 }
 
 .copyright{
@@ -406,8 +407,6 @@ main{
 }
 
 .card{
-    --x: 0;
-    --y: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -419,20 +418,20 @@ main{
     height: 37vw;
     border-radius: 30px;
     transition: .3s ease;
-    border: solid 2px #000000;
+    /* border: solid 2px #000000;
     background: radial-gradient(circle at var(--x) var(--y), rgba(229,73,237,1) 0%, rgba(0,212,255,0) 100%);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .card-open{
     width: 70vw;
-    /* background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../stock/img/landscap1.avif'); */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../stock/img/landscap1.avif');
 }
 
 .card-closed{
     cursor: pointer;
     width: 10vw;
-    /* background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../stock/img/landscap1.avif'); */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../stock/img/landscap1.avif');
 }
 
 .card-closed .card-title{
@@ -510,4 +509,37 @@ main{
 .see-projet-text, .see-projet svg{
     position: relative;
     z-index: 2;
+}
+
+.see-all-projets{
+    background-color: var(--green);
+    padding: 20px 50px;
+    border-radius: 15px;
+    transition: all .4s;
+}
+
+.see-all-projets p{
+    position: relative;
+    color: var(--black);
+}
+
+.see-all-projets p::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--black);
+    bottom: 0;
+    left: 0;
+    transition: all .2s;
+}
+
+.see-all-projets:hover p::before{
+    width: 70%;
+}
+
+.see-all-projets:hover{
+    transform: scale(1.2);
+    background-color: rgba(29,187,111,.4);
+    border: solid 3px var(--green);
 }

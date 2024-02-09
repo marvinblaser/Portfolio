@@ -23,9 +23,9 @@ function toggleCard(clickedCard) {
 // Ajouter un écouteur d'événements à toutes les cartes
 document.querySelectorAll(".card").forEach((card) => {
   card.addEventListener("click", () => toggleCard(card));
-  card.addEventListener("mousemove", (event)=>{
-    card.style.setProperty("--x", event.clientX + "px")
-    card.style.setProperty("--y", event.clientY + "px")
-    console.log(event.clientY)
-  })
+  // card.addEventListener("mousemove", (event)=>{
+  //   card.style.setProperty("--x", event.clientX + "px")
+  //   card.style.setProperty("--y", event.clientY + "px")
+  //   console.log(event.clientY)
+  // })
 });
